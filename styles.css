@@ -1,0 +1,273 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
+
+/* GENERICS */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+li {
+  list-style-type: none;
+}
+
+section {
+  background-color: rgb(245, 245, 245);
+}
+
+.title {
+  font-size: 120px;
+  margin-bottom: 12px;
+  text-align: left;
+  line-height: 1;
+}
+
+.color {
+  color: darkred !important;
+}
+
+.header__para {
+  font-size: 24px;
+  line-height: 2;
+  width: 100%;
+  max-width: 450px;
+}
+.container {
+    padding: 50px 0;
+}
+
+.row {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 12px;
+}
+
+
+.click {
+    transition: all 300ms ease;
+}
+
+.click:hover {
+  transform: scale(1.1);
+}
+
+.click:active {
+  transform: scale(0.8);
+
+}
+
+button, .pointer {
+  cursor: pointer;
+}
+
+/* LANDING PAGE */
+
+#landing-page {
+  min-height: 100vh;
+}
+
+.header {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: 1000px;
+  padding: 0 30px;
+}
+
+/* NAVIGATION */
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 100px;
+  padding: 0 20px;
+}
+
+.nav__link--list {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#personal-logo {
+  filter: invert(1);
+  width: 100px;
+}
+
+.nav__link {
+  margin: 0 12px;
+}
+
+.nav__link--anchor {
+  font-size: 16px;
+  font-weight: 700;
+  text-decoration: none;
+  color: #242424;
+}
+.fa-circle-half-stroke {
+  font-size: 20px;
+}
+
+.social__list {
+  margin-top: 16px;
+  display: flex;
+}
+
+.social__link {
+  background-color: darkred;
+  color: white;
+  padding: 6px;
+  width: 32px;
+  height: 32px;
+  font-size: 20px;
+  margin-right: 12px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mail {
+  position: absolute;
+  bottom: 32px;
+  right: 40px;
+  height: 72px;
+  width: 72px;
+  border-radius: 50%;
+  border: 1px solid black;
+  filter: invert(1);
+}
+
+.fa-envelope {
+  font-size: 32px;
+}
+
+.scroll {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX( -50%);
+}
+
+.scroll__icon {
+  width: 20px;
+  height: 30px;
+  border: 2px solid #242424;
+  border-radius: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+}
+
+.scroll__icon::after {
+    content: "";
+    width: 4px;
+    height: 6px;
+    border-radius: 2px;
+    background-color: #242424;
+    animation: scroll 1000ms infinite alternate-reverse;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateY(3px);
+    }
+    100% {
+        transform: translateY(-3px);
+    }
+    
+}
+
+/* PROJECTS */
+
+.project {
+    padding-bottom: 64px;
+}
+
+.projects__header {
+    text-align: center;
+    font-size: 48px;
+    margin-bottom: 60px;
+}
+
+.project__wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    box-shadow: 0 20px 80px 0 rgb(0, 0, 0, 0.45);
+    overflow: hidden;
+}
+
+.project__img {
+    width: 100%;
+    max-width: 800px;
+    transition: all 450ms ease;
+}
+
+.project__wrapper:hover .project__description {
+    opacity: 1;
+    transform: translateY(-50%);
+}
+
+.project__wrapper:hover .project__img {
+    transform: scale(1.07);
+    filter: blur(5px);
+}
+
+.project__wrapper:hover .project__wrapper--bg {
+    opacity: 0.7;
+}
+
+.project__description {
+    position: absolute;
+    top: 50%;
+    left: 90px;
+    transform: translateY(100%);
+    color: white;
+    max-width: 550px;
+    opacity: 0;
+    transition: opacity 300ms, transform 450ms ease;
+}
+
+.project__wrapper--bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #1c1d25;
+   transition: all 450ms ease;
+   opacity: 0;
+}
+
+.project__description--title{
+    font-size: 40px;
+}
+
+.project__description--link {
+    color: white; 
+    font-size: 20px;
+    margin-right: 16px;
+}
+
+.project__description--sub-title {
+    margin-top: 8px;
+}
+
+.project__description--para {
+    margin: 16px 0;
+}
+
