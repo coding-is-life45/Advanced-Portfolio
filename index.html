@@ -10,6 +10,14 @@
       crossorigin="anonymous"
     ></script>
     <script src="index.js" defer></script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init("a9fGiyqY8ljCFtSfP");
+   })();
+</script>
   </head>
   <body>
     <section id="landing-page">
@@ -32,7 +40,7 @@
             ></a
             >Projects
           </li>
-          <li class="nav__link link__hover-effect">
+          <li class="nav__link link__hover-effect" onclick="toggleModal()">
             <a
               href="#"
               class="nav__link--anchor  link__hover-effect--black"
@@ -44,7 +52,7 @@
               href="#"
               class="nav__link--anchor  link__hover-effect--black"
             ></a
-            ><i class="fa-solid fa-circle-half-stroke click"></i>
+            ><i class="fa-solid fa-circle-half-stroke click" onclick="toggleContrast()"></i>
           </li>
         </ul>
       </nav>
@@ -55,7 +63,7 @@
           I'm a <b class="color">Frontend Software Engineer</b> with a passion
           for developing myself daily.
           <br />
-          Here's a bit more <b class="color pointer">about me</b>.
+          Here's a bit more <b class="color pointer" onclick="toggleModal()">about me</b>.
         </p>
         <div class="social__list">
           <a class="social__link click"><i class="fa-brands fa-linkedin-in"></i></a>
@@ -63,7 +71,7 @@
           <a class="social__link click"><i class="fa-regular fa-file-pdf"></i></i></a>
         </div>
       </header>
-      <button class="mail click">
+      <button class="mail click" onclick="toggleModal()">
         <i class="fa-solid fa-envelope"></i>
       </button>
       <a href="#projects" class="scroll">
@@ -72,7 +80,7 @@
       <div class="modal">
 <div class="modal__half modal__about">
     <h3 class="modal__title modal__title--about">Here's a little about me.</h3>
-    <h4 class="modal__subtitle modal__subtitle--about">Frontend Software Engineer</h4>
+    <h4 class="modal__sub-title modal__sub-title--about">Frontend Software Engineer</h4>
 <p class="modal__para modal__para--about">
     I'm a 40 year old self-taught <b class="color">Frontend Software Engineer</b>.
     <br>
@@ -98,24 +106,43 @@
 </div>
 </div>
 <div class="modal__half modal__contact">
+    <i class="fa-solid fa-x modal__exit click" onclick="toggleModal()"></i>
     <h3 class="modal__title modal__title--contact">Let's have a chat!</h3>
     <h4 class=" modal__sub-title modal__sub-title--contact">I'm currently open to new opportuntites</h4>
-    <form id="contact__form" action="">
+    <form id="contact__form" onsubmit="contact(event)">
         <div class="form-item">
             <label class="form__item--label" for="name">Name</label>
-            <input type="text" name="user_name" class="input" required></div></input>
+            <input type="text" name="user_name" class="input" ></input>
         </div>
         <div class="form-item">
             <label class="form__item--label" for="email">Email</label>
-            <input type="email" name="user_email" class="input" required></input>
+            <input type="email" name="user_email" class="input" ></input>
         </div>
         <div class="form-item">
             <label class="form__item--label" for="message">Message</label>
-            <textarea type="text" name="message" class="input" required></textarea>
+            <textarea type="text" name="message" class="input" ></textarea>
         </div>
+        <button id="contact__submit"  class="form__submit">Send it my way!</button>
     </form>
+    <div class="modal__overlay modal__overlay--loading">
+        <i class="fa-solid fa-spinner"></i>
+    </div>
+    <div class="modal__overlay modal__overlay--success">
+        Thanks for the message! Looking forward to speaking with you soon!
+    </div>
 </div>
-      </div>
+<img src="assets/semi circle.svg" class="shape shape__0" >
+<img src="assets/circle.svg" class="shape shape__1" >
+<img src="assets/squiggly.svg" class="shape shape__2" >
+<img src="assets/circle.svg" class="shape shape__3" >
+<img src="assets/triangle.svg" class="shape shape__4" >
+<img src="assets/circle.svg" class="shape shape__5" >
+<img src="assets/squiggly.svg" class="shape shape__6" >
+<img src="assets/circle.svg" class="shape shape__7" >
+<img src="assets/semi circle.svg" class="shape shape__8" >
+
+
+      
     </section>
     <section id="projects">
         <div class="container">
