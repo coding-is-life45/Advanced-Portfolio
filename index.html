@@ -20,60 +20,71 @@
 </script>
   </head>
   <body>
-    <section id="landing-page">
+    <section id="landing-page" onmousemove="moveBackground(event)">
       <nav>
         <figure>
           <img class="personal-logo" src="transparent__logo.png" alt="" />
         </figure>
         <ul class="nav__link--list">
-          <li class="nav__link link__hover-effect">
+          <li class="nav__link" onclick="toggleModal()">
             <a
               href="#"
-              class="nav__link--anchor  link__hover-effect--black"
-            ></a
-            >About
+              class="nav__link--anchor   link__hover-effect link__hover-effect--black"
+            >About</a
+            >
           </li>
-          <li class="nav__link link__hover-effect">
+          <li class="nav__link">
             <a
-              href="#"
-              class="nav__link--anchor  link__hover-effect--black"
-            ></a
-            >Projects
+              href="#projects"
+              class="nav__link--anchor   link__hover-effect link__hover-effect--black"
+            >Projects</a
+            >
           </li>
-          <li class="nav__link link__hover-effect" onclick="toggleModal()">
+          <li class="nav__link" onclick="toggleModal()">
             <a
               href="#"
-              class="nav__link--anchor  link__hover-effect--black"
-            ></a
-            >Contact
+              class="nav__link--anchor  link__hover-effect link__hover-effect--black click"
+            >Contact</a
+            >
           </li>
           <li class="nav__link">
             <a
               href="#"
-              class="nav__link--anchor  link__hover-effect--black"
+              class="nav__link--anchor   link__hover-effect link__hover-effect--black"
             ></a
             ><i class="fa-solid fa-circle-half-stroke click" onclick="toggleContrast()"></i>
           </li>
         </ul>
       </nav>
       <header class="header">
+        <div class="header__content">
         <h1 class="title">Hey</h1>
         <h1 class="title color">I'm Scott</h1>
         <p class="header__para">
           I'm a <b class="color">Frontend Software Engineer</b> with a passion
           for developing myself daily.
           <br />
-          Here's a bit more <b class="color pointer" onclick="toggleModal()">about me</b>.
+          Here's a bit more <b class="color click" onclick="toggleModal()">about me</b>.
         </p>
         <div class="social__list">
-          <a class="social__link click"><i class="fa-brands fa-linkedin-in"></i></a>
-          <a class="social__link click"><i class="fa-brands fa-github"></i></a>
-          <a class="social__link click"><i class="fa-regular fa-file-pdf"></i></i></a>
+          <a href="#" class="social__link click">
+            <i class="fa-brands fa-linkedin-in"></i>
+          </a>
+          <a href="#" class="social__link click">
+            <i class="fa-brands fa-github"></i>
+          </a>
+          <a href="#" class="social__link click">
+            <i class="fa-regular fa-file-pdf"></i>
+          </a>
         </div>
+      </div>
       </header>
-      <button class="mail click" onclick="toggleModal()">
+
+      <a href="#">
+      <button class="mail__btn click" onclick="toggleModal()">
         <i class="fa-solid fa-envelope"></i>
       </button>
+    </a>
       <a href="#projects" class="scroll">
        <div class="scroll__icon click"></div>
       </a>
@@ -131,19 +142,16 @@
         Thanks for the message! Looking forward to speaking with you soon!
     </div>
 </div>
-<img src="assets/semi circle.svg" class="shape shape__0" >
-<img src="assets/circle.svg" class="shape shape__1" >
-<img src="assets/squiggly.svg" class="shape shape__2" >
-<img src="assets/circle.svg" class="shape shape__3" >
-<img src="assets/triangle.svg" class="shape shape__4" >
-<img src="assets/circle.svg" class="shape shape__5" >
-<img src="assets/squiggly.svg" class="shape shape__6" >
-<img src="assets/circle.svg" class="shape shape__7" >
-<img src="assets/semi circle.svg" class="shape shape__8" >
-
-
-      
-    </section>
+<img src="squiggly.svg" class="shape shape__0">
+<img src="circle.svg" class="shape shape__1">
+<img src="squiggly.svg" class="shape shape__2">
+<img src="circle.svg" class="shape shape__3">
+<img src="triangle.svg" class="shape shape__4">
+<img src="circle.svg" class="shape shape__5">
+<img src="squiggly.svg" class="shape shape__6">
+<img src="circle.svg" class="shape shape__7">
+<img src="semi_circle.svg" class="shape shape__8">
+</section>
     <section id="projects">
         <div class="container">
             <div class="row">
@@ -175,9 +183,7 @@
                             <div class="project__description">
                                 <h3 class="project__description--title">Treact Project</h3>
                                 <h4 class="project__description--sub-title">HTML, CSS</h4>
-                                <p class="project__description--para">Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-                                    Ipsum totam provident rem nam, similique quasi perferendis ex molestias adipisci atque animi 
-                                    magnam a molestiae, laborum impedit, ea reprehenderit quis esse.
+                                <p class="project__description--para">This is a copy of the Treact webpage. It only encompasses a few of the elements of the page to showcase my ability to build the visual aspects of a webpage.
                                 </p>
                                 <div class="project__description--links">
                                   <a href="#" class="project__description--link"><i class="fa-brands fa-linkedin-in"></i></a>  
@@ -198,11 +204,12 @@
             <figure>
                 <img src="transparent__logo.png" class="footer__personal-logo" alt="">
             </figure>
-            <div class="footer__social--list">   
-                <a href="" class="footer__social--link link__hover-effect link__hover-effect--white">Github</a>    
-                <a href="" class="footer__social--link link__hover-effect link__hover-effect--white">LinkedIn</a>
-                <a href="" class="footer__social--link link__hover-effect link__hover-effect--white">Contact</a>
-                <a href="" class="footer__social--link link__hover-effect link__hover-effect--white">Resume</a>
+            <div class="footer__soci
+            al--list">   
+                <a href="#" class="footer__social--link link__hover-effect link__hover-effect--white">Github</a>    
+                <a href="#" class="footer__social--link link__hover-effect link__hover-effect--white">LinkedIn</a>
+                <a href="#" onclick="toggleModal()"class="footer__social--link link__hover-effect link__hover-effect--white">Contact</a>
+                <a href="#" class="footer__social--link link__hover-effect link__hover-effect--white">Resume</a>
             </div>
             <div class="footer__copyright">Copyright&copy;2023 Scott Dyer</div>
         </div>

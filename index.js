@@ -1,8 +1,20 @@
 // My email template id: template_uqvjgoo
 // Public Key: USsx3lKedIdSaEmK7
 // Gmail services id: service_i11quoa
-let isModalOpen; 
+let isModalOpen = false; 
 let contrastToggle = false;
+
+function moveBackground(event) {
+    const shapes = document.querySelectorAll(".shape");
+    const x = event.clientX * 0.02;
+    const y = event.clientY * 0.02;
+
+    for(let i = 0; i < shapes.length; i++) {
+        const isOdd = i % 2 !== 0;
+        const boolInt = isOdd ? -1 : 1;
+        shapes[i].style.transform = `translate(${x * boolInt}px, ${y * boolInt}px)`
+    }
+}
 
 function toggleContrast() {
     contrastToggle = !contrastToggle;
@@ -36,11 +48,12 @@ function contact(event) {
 }
 
 function toggleModal() {
-    
+    isModalOpen = !isModalOpen;
     if(isModalOpen) {
-        isModalOpen = false;
+        isModalOpen = true;
         return document.body.classList.remove("modal__open")
     }
-    isModalOpen = true;
+    isModalOpen = false;
     document.body.classList += " modal__open"
 }
+
